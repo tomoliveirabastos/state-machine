@@ -21,7 +21,6 @@ public class StupidParser {
     }
 
     public void EL() throws Exception {
-
         token = scanner.nextToken();
         if (token != null) {
             OP();
@@ -33,10 +32,9 @@ public class StupidParser {
     public void T() throws Exception {
         token = scanner.nextToken();
 
-        if (token.getType() != 0 && token.getType() != 1) {
+        if (token != null && token.getType() != 0 && token.getType() != 1) {
             throw new Exception("Invalid character");
         }
-
     }
 
     public void OP() throws Exception {
